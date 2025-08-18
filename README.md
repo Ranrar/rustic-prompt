@@ -1,9 +1,11 @@
 # 🦀 Rustic Prompt
+A collection of AI instruction files designed specifically for **Rust developers**.  
+Use these instructions to power intelligent agents in tools like **GitHub Copilot**, **VS Code**, or any AI-powered development assistant.
 
-A collection of AI instruction files designed specifically for Rust developers. Use these instructions to power intelligent agents in tools like **GitHub Copilot**, **VS Code**, or any AI-powered development assistant.
+- **Instruction sets** – predefined prompts and role definitions for Rust-related tasks.  
+- **Agent behavior files** – configurations for AI agents to act as Rust coding assistants.  
 
-## Instruction Files
-This repository contains instruction sets and agent behavior files tailored for building intelligent Rust developer tools and agents. Ideal for integrating with Copilot, LLMs, and AI-enhanced developer workflows.
+They are tailored for building intelligent Rust developer tools and agents, and are ideal for integration with **Copilot**, **LLMs**, and **AI-enhanced developer workflows**.
 
 
 | Title | Description | Open in VS Code |
@@ -11,41 +13,58 @@ This repository contains instruction sets and agent behavior files tailored for 
 | **Rust Specific Instructions** | Agent guidance for handling Rust-specific coding workflows. | [![Open in VS Code](https://img.shields.io/badge/Open%20in-VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/github/Ranrar/rustic-promt/blob/main/.github/instructions/rust.instructions.md) |
 | **Rust Lint Specialist** | Analyze Rust lints, trace code interactions, and resolve false positives. Enhanced with trace analysis. | [![Open in VS Code](https://img.shields.io/badge/Open%20in-VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/github/Ranrar/rustic-promt/blob/main/.github/instructions/linthunter.instructions.md) |
 
+## General-Purpose Instructions
+These instructions are designed for **any programming language or workflow** and can be used universally in VS Code or other AI-powered tools:
 
 | Title | Description | Open in VS Code |
 | ----- | ----------- | --------------- |
 | **Syntax Error Specialist** | Diagnose and explain syntax errors in multiple languages. Clear and practical fixes. | [![Open in VS Code](https://img.shields.io/badge/Open%20in-VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/github/Ranrar/rustic-promt/blob/main/.github/instructions/syntaxhunter.instructions.md) |
 | **Debug Mode Instructions** | Structured debugging guide for agents to systematically resolve application bugs. | [![Open in VS Code](https://img.shields.io/badge/Open%20in-VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/github/Ranrar/rustic-promt/blob/main/.github/instructions/debug.instructions.md) |
 
-## About This Project
+**Note:** Any AI model can be used with these files — either as **instructions** or in a **chat mode**, depending on your setup.
 
-The goal of this repo is to support **intelligent Rust tooling** by embedding AI instruction sets tailored to key developer tasks like linting, syntax correction, and debugging.
+## Using in VS Code
 
-Each file in `.github/instructions/` can be referenced by AI agents, Copilot extensions, or automation tools to provide context-aware support.
+You can use these files in **two ways** inside VS Code:  
+1. As **Custom Instructions** (persistent behavior)  
+2. As **Chat Mode** (temporary session guidance)  
 
-## Directory Structure
+### 1. Instructions Mode (Persistent)
+This mode makes Copilot always follow the rules from a file.  
+Good for consistent guidance, e.g., enforcing Rust formatting or coding standards.
 
-```
-📦 rustic-promt/
-└── .github/
-└── instructions/
-├── rust.instructions.md
-├── linthunter.instructions.md
-├── syntaxhunter.instructions.md
-└── debug.instructions.md
-```
+Steps:
+1. Open VS Code.  
+2. Go to **Settings → GitHub Copilot → Configure Custom Instructions**.  
+3. Copy the content of an instruction file (e.g., `instructions/rust_refactor.md`).  
+4. Paste it into the **Custom Instructions** field.  
+5. Save and restart Copilot.  
 
-## How To Use
+Now, every Copilot suggestion will be shaped by the Rust-specific instructions.
 
-> **Usage:**  
-> Copy any of the provided instruction files into your own project's `.github/instructions` directory.  
-> You can then reference them in your AI tools, Copilot agents, or developer assistant setups.
+### 2. Chat Mode (Session-Based)
+This mode applies the file only for one chat session.  
+Good for **ad-hoc tasks**, e.g., refactoring one module or debugging a function.
+
+Steps:
+1. Open the **Copilot Chat** panel (`Ctrl+Shift+I` / `Cmd+Shift+I`).  
+2. Paste the content of an instruction file as your **first message**.  
+3. Continue the conversation — the assistant will follow those rules until the chat resets.  
+
+### Key Difference
+
+| Mode              | When to Use                              | Scope                        |
+|-------------------|-------------------------------------------|------------------------------|
+| **Instructions**  | Long-term guidance (always on)           | Persistent across sessions   |
+| **Chat Mode**     | Short-term, task-specific instructions   | Only active in one chat      |
+
+Tip: Combine both — set **general Rust coding rules** in Instructions Mode, and use **Chat Mode** for specific workflows like migrations, refactors, or testing.
 
 ## Credits
 
 This project draws inspiration from prominent AI prompt collections and experts in the developer community:
 
-| Contributor   | Description                                                                            | Link                                                                                                                           |
+| Name   | Description                                                                            | Link                                                                                                                           |
 | ------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | burkeholland  | Curated AI prompt examples and developer workflows, widely used for improving coding productivity. | [![GitHub](https://img.shields.io/badge/GitHub-007ACC?style=flat-square&logo=github&logoColor=white)](https://gist.github.com/burkeholland) |
 | voidfnc       | A collection of advanced AI prompts designed to enhance coding assistants and automation. | [![GitHub](https://img.shields.io/badge/GitHub-007ACC?style=flat-square&logo=github&logoColor=white)](https://github.com/voidfnc/voidfnc_prompts) |
@@ -67,6 +86,6 @@ Discover these valuable prompt repositories and resources for AI-assisted develo
 
 Master the art of prompt engineering with this comprehensive guide:
 
-| Guide | Description | Link |
+| Name | Description | Link |
 | ----- | ----------- | ---- |
-| GPT-4.1 Prompting Guide | Official OpenAI guide detailing best practices for crafting effective GPT-4 prompts. | [![OpenAI](https://img.shields.io/badge/OpenAI-007ACC?style=flat-square&logo=openai&logoColor=white)](https://cookbook.openai.com/examples/gpt4-1_prompting_guide) |
+| Guide | Official OpenAI guide detailing best practices for crafting effective prompts. | [![OpenAI](https://img.shields.io/badge/OpenAI-007ACC?style=flat-square&logo=openai&logoColor=white)](https://cookbook.openai.com/examples/gpt4-1_prompting_guide) |
