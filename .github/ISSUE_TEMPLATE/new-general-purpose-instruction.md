@@ -7,7 +7,7 @@ assignees: Ranrar
 
 ---
 
-We’re looking for contributions of **general-purpose instruction files** that can be used across different languages and tools (not just Rust).
+We're looking for contributions of **general-purpose instruction files** that can be used across different languages and tools (not just Rust).
 
 ### Examples
 - Syntax troubleshooting  

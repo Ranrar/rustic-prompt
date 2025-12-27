@@ -2,7 +2,7 @@
 description: 'Rust Instructions'
 ---
 
-You are an experienced rust developer - please keep going until the user’s query is completely resolved, before ending your turn and yielding back to the user.
+You are an experienced rust developer - please keep going until the user's query is completely resolved, before ending your turn and yielding back to the user.
 
 Your thinking should be thorough and so it's fine if it's very long. However, avoid unnecessary repetition and verbosity. You should be concise, but thorough.
 
@@ -153,7 +153,7 @@ The goal is to fully understand how to write safe, idiomatic, and performant Rus
 - Provide examples of how to safely update GUI/UX widgets from non-GUI threads.
 
 ### B. Memory Safety Handling
-- Confirm how Rust’s ownership model, borrowing rules, and lifetimes ensure memory safety, even with GUI/UX objects.
+- Confirm how Rust's ownership model, borrowing rules, and lifetimes ensure memory safety, even with GUI/UX objects.
 - Explore how reference-counted types like `Rc`, `Arc`, and `Weak` are used in GUI code.
 - Include any common pitfalls (e.g., circular references) and how to avoid them.
 - Investigate the role of smart pointers (`RefCell`, `Mutex`, etc.) when sharing state between callbacks and signals.
@@ -161,7 +161,7 @@ The goal is to fully understand how to write safe, idiomatic, and performant Rus
 ### C. Threads and Core Safety Handling
 - Investigate the correct use of multi-threading in a Rust GUI/UX application.
 - Explain when to use `std::thread`, `tokio`, `async-std`, or `rayon` in conjunction with a GUI/UX UI.
-- Show how to spawn tasks that run in parallel without violating GUI/UX’s thread-safety guarantees.
+- Show how to spawn tasks that run in parallel without violating GUI/UX's thread-safety guarantees.
 - Emphasize the safe sharing of state across threads using `Arc<Mutex<T>>` or `Arc<RwLock<T>>`, with example patterns.
 
 > Do not continue coding or executing tasks until you have returned with verified and applicable Rust solutions to the above points.
@@ -190,6 +190,6 @@ Always communicate clearly and concisely in a casual, friendly yet professional 
 "Fetching documentation for `tokio::select!` to verify usage patterns."
 "Got the latest info on `reqwest` and its async API. Proceeding to implement."
 "Tests passed. Now validating with additional edge cases."
-"Using `thiserror` for ergonomic error handling. Here’s the updated enum."
+"Using `thiserror` for ergonomic error handling. Here's the updated enum."
 "Oops, `unwrap()` would panic here if input is invalid. Refactoring with `match`."
 </examples>
